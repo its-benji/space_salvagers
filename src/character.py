@@ -15,14 +15,16 @@ class Character:
     
     def use_stim(self):
         if self.stim >= 1:
-            self.hp += 50
+            self.hp += 100
             self.stim -= 1
 
 def CharacterFactory(char_type, name):
     if char_type == 'PLAYER':
-        return Character(name, 200, WeaponFactory('NOTHING'))
+        return Character(name, 200, WeaponFactory('nothing'))
     elif char_type == 'SPACE_PIRATE':
-        return Character('Pirate', 100, WeaponFactory('PULSE_RIFLE'))
+        return Character(name, 150, WeaponFactory('pulse_rifle'))
+    elif char_type == 'SPACE_PIRATE_CAPTAIN':
+        return Character(name, 180, WeaponFactory('phase_blade'))
     else:
         print('error, invalid character type')
 
