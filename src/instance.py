@@ -73,7 +73,7 @@ class Instance:
         print("Kaydin: Nice choice! Now, let's get moving.")
         dots()
         
-        # opening_scene()
+        opening_scene()
 
         alive = True
         self.current_room = "YV-4"
